@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/png" href="../www.png" />
-    <!--shortcut icon downloaded from: https://uxwing.com/www-icon/ -->
-    <title>My Document</title>
-  </head>
 
-  <body>
-    <div class="bodyDiv">
-      <div class="headerDiv">
-        <header>
-          <h1>Git Hub API</h1>
-        </header>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/png" href="../www.png" />
+  <title>My Document</title>
+</head>
 
-      <div id="mainDiv">
-        <main>
-          <div>
-            <p>This is paragraph element of document</p>
-          </div>
-        </main>
-      </div>
-
-      <div class="footerDiv">
-        <footer class="pageFooter">This is footer element of document</footer>
-      </div>
+<body>
+  <div class="bodyDiv">
+    <div class="headerDiv">
+      <header>
+        <h1 class="title">Git Hub API</h1>
+      </header>
     </div>
-  </body>
+
+    <div id="mainDiv">
+      <main>
+        <form class="form" novalidate>
+          <input type="text" class="form__input" required>
+          <button type="submit" class="form__button">Поиск</button>
+          <span class="form__errorMessage">заполните поле ввода</span>
+        </form>
+        <section class="resultTable">
+        </section>
+      </main>
+    </div>
+
+    <div class="footerDiv">
+    </div>
+  </div>
+</body>
+
 </html>

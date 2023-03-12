@@ -1,0 +1,14 @@
+.resultTable {
+width:  55vw;
+  margin: 0 auto;
+
+  &__message {
+    text-align: center;
+    font: 18px/24px 'Arial', sans-serif;
+    font-weight: 800;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 95vw;
+  }
+}

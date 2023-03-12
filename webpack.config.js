@@ -29,7 +29,7 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.css$/,
+        test: /\.s[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -37,6 +37,7 @@ module.exports = {
             options: { importLoaders: 1 },
           },
           'postcss-loader',
+          'sass-loader',
         ],
       },
     ],
