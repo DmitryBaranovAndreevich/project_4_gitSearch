@@ -5,6 +5,8 @@ class Form {
     this.form = document.querySelector(`.${className}`);
     this.input = this.form.querySelector(`.${className}__input`);
     this.errorMessage = this.form.querySelector(`.${className}__errorMessage`);
+    this.button = document.querySelector(`.${className}__button`);
+    console.log(this.button)
     this.baseUrl = 'https://api.github.com';
   }
 
@@ -30,14 +32,20 @@ class Form {
     return true;
   }
 
+  setLoader() {
+    return `<div class="spinner"><i class="spinner__i"></i></div>`;
+  }
+
   submit = (e) => {
     e.preventDefault();
+    this.button.innerHTML = this.setLoader();
     const value = this.input.value;
     if (this.validateValue(value)) {
       this.getApi(value)
         .then((res) => {
           this.table.printResults(res.items);
           this.input.value = '';
+          this.button.textContent = 'Поиск';
         })
         .catch((e) => console.log(e));
     }
